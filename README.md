@@ -52,6 +52,6 @@ pip install opencv-python mediapipe pyautogui
 git clone https://github.com/your_username/gesture-recognition.git
 cd gesture-recognition
 
-pip install -r requirements.txt
+
 
 
