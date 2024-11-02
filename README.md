@@ -45,4 +45,11 @@ _Add a GIF or screenshot showing the project in action._
 Install the dependencies using:
 ```bash
 pip install opencv-python mediapipe pyautogui
+# **Installation**
+
+### Clone the repository:
+```bash
+git clone https://github.com/your_username/gesture-recognition.git
+cd gesture-recognition
+
 
