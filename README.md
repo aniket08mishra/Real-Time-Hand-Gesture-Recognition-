@@ -46,3 +46,56 @@ _Add a GIF or screenshot showing the project in action._
 Install the dependencies using:
 ```bash
 pip install opencv-python mediapipe pyautogui
+## Description 
+Installation
+Clone the repository:
+bash
+Copy code
+git clone https://github.com/your_username/gesture-recognition.git
+cd gesture-recognition
+Install dependencies:
+bash
+Copy code
+pip install -r requirements.txt
+Usage
+Run the script using:
+bash
+Copy code
+python main.py
+Controls:
+Left Hand: Controls the mouse pointer.
+Right Hand Swipe: Simulates keyboard arrow keys.
+Swipe right → Right arrow key
+Swipe left → Left arrow key
+Swipe up → Up arrow key
+Swipe down → Down arrow key
+Rock Gesture (Right Hand): Presses the spacebar.
+Press 'q' to exit the program.
+Code Explanation
+Hand Tracking Initialization:
+The MediaPipe library initializes hand detection (mp_hands.Hands()) and tracks hand landmarks.
+
+Screen Resolution and Webcam Feed:
+PyAutoGUI detects the screen resolution, and OpenCV captures the webcam feed. The frame is horizontally flipped for a mirror effect.
+
+Gesture Recognition:
+
+Mouse Control with Left Hand:
+The left hand’s middle finger's MCP (middle knuckle) is used to track and move the mouse cursor.
+Swipe Gestures with Right Hand:
+The position of the index finger tip (INDEX_FINGER_TIP) is used to calculate swipe movements, triggering arrow key events.
+Rock Gesture for Spacebar:
+The distance between the thumb tip and the pinky MCP landmark is used to detect a rock gesture, simulating a spacebar press.
+Real-Time Drawing on Frame:
+MediaPipe’s drawing utilities mark hand connections on the frame for a better visual representation of gestures.
+
+Future Improvements
+Add additional gestures for more keyboard controls.
+Improve gesture accuracy and tracking speed.
+Customize gesture mappings to allow user preferences.
+Acknowledgements
+MediaPipe by Google for efficient hand-tracking.
+OpenCV for image processing and handling video feed.
+PyAutoGUI for handling mouse and keyboard automation.
+License
+This project is licensed under the MIT License.
